@@ -1,28 +1,60 @@
 import React, { Component } from 'react';
-import ProfessionalButton from './components/ProfessionalButton/ProfessionalButton';
-import BlogButton from './components/BlogButton/BlogButton';
+import ProfessionalCV from './components/ProfessionalCV/ProfessionalCV';
+import Blog from './components/Blog/Blog';
+import Landing from './components/Landing/Landing';
 
 import './App.css';
 
 class App extends Component {
+
+constructor() {
+  super();
+  this.state ={
+    route:'landing'
+  }
+}
+
+onRouteChange = (route) => {
+  if (route === 'landing') {
+    this.setState({route: 'landing'})
+  }
+  else if (route === 'cv') {
+    this.setState({route: 'cv'})
+  }
+  else if (route === 'blog')
+    this.setState({route: 'blog'})
+}
+
+
   render() {
     return (
       <div className="App">
-      <h1>Welcome to Kyle's Site!</h1> 
-        <div className = "flex w-100">
-          <div className="fl w-50">
-            <ProfessionalButton />
-          </div>
-          <div className="fl w-50">
-            <BlogButton  />
-          </div>
-        </div>
-         
+
+      {this.state.route === 'landing'
+          ?<Landing onRouteChange={this.onRouteChange}/>
+          :null
+      }
+
+      {this.state.route === 'cv'
+          ?<ProfessionalCV onRouteChange={this.onRouteChange} />
+          :null
+      }
+
+      {this.state.route === 'blog'
+        ?<Blog onRouteChange={this.onRouteChange}/>
+        :null
+      }
 
       </div>
       
     );
   }
+
+
+
+
+
+
 }
 
 export default App;
