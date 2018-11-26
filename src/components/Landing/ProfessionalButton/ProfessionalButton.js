@@ -6,7 +6,7 @@ const ProfessionalButton = ({onRouteChange}) =>{
 
 return(
     <div >
-        <img onClick={() => onRouteChange('cv')} className="pointer br-100 w-50 grow shadow-5" src={Headshot}></img>
+        <img onClick={() => onRouteChange('cv')} className="pointer br-100 w-50 grow shadow-5" src={Headshot} alt="CvLink"></img>
         <h2>Find out more about me!</h2>
     </div>
 );

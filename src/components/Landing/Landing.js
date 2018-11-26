@@ -4,10 +4,6 @@ import BlogButton from './BlogButton/BlogButton';
 
 class Landing extends React.Component{
 
-    constructor(props){
-        super(props);
-    }
-
     render(){
         const {onRouteChange} = this.props;
         return (

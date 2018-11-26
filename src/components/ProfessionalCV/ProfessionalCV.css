@@ -1,0 +1,34 @@
+.cvContainer {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cvFlavour {
+    background-color: blueviolet;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cvBody {
+    background-color: aquamarine;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cvCell {
+    border-top: 1px solid black;
+    padding-bottom: 3px;
+}
+
+.cellHeader{
+    display: flex;
+    justify-content: space-around;
+}
+
+p {
+    margin-bottom: 10px;
+}
