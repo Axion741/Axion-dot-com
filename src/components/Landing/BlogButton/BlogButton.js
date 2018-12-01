@@ -1,5 +1,5 @@
 import React from 'react';
-import Blogshot from './chris-ried-512801-unsplash.jpg';
+import Blogshot from './chris-ried-512801-unsplash2.jpg';
 
 const BlogButton = ({onRouteChange}) =>{
 return(
