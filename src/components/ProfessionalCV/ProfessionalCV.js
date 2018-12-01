@@ -9,7 +9,7 @@ const ProfessionalCV = ({ onRouteChange }) => {
             <h1>CV</h1>
 
             <div className="cvContainer">
-                
+
                 <div className="cvFlavour ba">
                     <h1>Flava Flave</h1>
                     <h2>Supa Flave is a mega flave in the flava flave wave</h2>
@@ -21,35 +21,86 @@ const ProfessionalCV = ({ onRouteChange }) => {
 
                     <div className="cvCell">
                         <div className="cellHeader">
-                            <h2>Section 1</h2>
-                            <h2>01/01/2018</h2>
+                            <h2>Kyle Ballagher</h2>
+                            <h2>k.ballagher@gmail.com</h2>
                         </div>
-                        <p>Kyle is awesome and you should hire him.</p>
+                        <div className="profLinks">
+                            <a href='https://www.linkedin.com/in/kyleballagher/'>LinkedIn</a>
+                            <a href='https://github.com/Axion741'>GitHub</a>
+                            <a href='https://axion-smartbrain.herokuapp.com/'>Axion's SmartBrain</a>
+                        </div>
+
+
                     </div>
 
                     <div className="cvCell">
                         <div className="cellHeader">
-                            <h2>Section 2</h2>
-                            <h2>06/01/2018</h2>
+                            <h2>Key Skills and Training</h2>
                         </div>
-                        <p>Kyle is pretty cool and you should hire him.</p>
+
+                        <div className="skillBlock">
+                            <div className="skillList">
+                                <p>C# (Primarily in the Unity Editor)</p>
+                                <p>Basic Android Development with XML and JavaScript</p>
+                                <p>Experience with Visual Studio and VS Code</p>
+                            </div>
+                            <div className="skillList">
+                                <p>Full Stack Web Development</p>
+                                <p>React.js framework, with Node.js and Express.js Server</p>
+                                <p>PostgreSQL relational database management</p>
+                            </div>
+
+                        </div>
+
                     </div>
 
                     <div className="cvCell">
                         <div className="cellHeader">
-                            <h2>Section 3</h2>
-                            <h2>09/01/2018</h2>
+                            <h2>Online Learning</h2>
                         </div>
-                        <p>Kyle is the best and you should hire him.</p>
+                        <div className="courseLinks">
+                            <a href="https://www.udemy.com/unitycourse/">Complete C# Unity Developer 2D: Learn to Code Making Games - Ben Tristem (Ongoing)</a>
+                            <a href="https://www.udemy.com/the-complete-web-developer-in-2018/">The Complete Web Developer 2019: Zero to Mastery - Andrei Neagoie</a>
+                            <a href="https://eu.udacity.com/course/android-basics-nanodegree-by-google--nd803">Google Developer Challenge: Android Basics</a>
+                        </div>
+                    </div>
+
+
+
+                    <div className="cvCell">
+                        <div className="cellHeader">
+                            <h2>"Project Potential"</h2>
+                            <h2>Unity RPG - Android</h2>
+                        </div>
+                        <p>Turn-based RPG written in C# with the Unity3D engine.</p>
+                        <p>Features basic RPG leveling mechanics and enemies of increasing difficulty.</p>
+                        <p>Basis for "Project Godai", a huge expansion on the "Project Potential" formula.</p>
+                        <p>Available on the Google Play Store for free <a className="boldLink" href="https://play.google.com/store/apps/details?id=com.Axion741.ProjectPotential">here!</a></p>
                     </div>
 
                     <div className="cvCell">
                         <div className="cellHeader">
-                            <h2>Section 4</h2>
-                            <h2>02/04/2018</h2>
+                            <h2>"Project SmartBrain"</h2>
+                            <h2>Full Stack React App</h2>
                         </div>
-                        <p>You get the idea.</p>
+                        <p>Final project of the Complete Web Developer course.</p>
+                        <p>Features a React.js front-end, with an integrated face-detection API.</p>
+                        <p>Also features a Node.js/Express.js server, and a PostgreSQL database.</p>
+                        <p>Hosted on Heroku, link up top!</p>
                     </div>
+
+                    <div className="cvCell">
+                        <div className="cellHeader">
+                            <h2>"Project Godai"</h2>
+                            <h2>Unity RPG - Android</h2>
+                        </div>
+                        <p>Major expansion on "Project Potential".</p>
+                        <p>Features multiple characters with independent leveling.</p>
+                        <p>Features expanded enemy types with different attack patterns and abilities.</p>
+                        <p>Currently in alpha, pre-release APKs are available from GitHub.</p>
+                    </div>
+
+
 
 
                 </div>

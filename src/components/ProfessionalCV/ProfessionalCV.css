@@ -1,27 +1,40 @@
+p {
+    margin-bottom: 10px;
+}
+
+.boldLink {
+    text-decoration: none; 
+    font-weight: bold;
+    color: black;
+}
+
 .cvContainer {
     display: flex;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
 }
 
 .cvFlavour {
     background-color: blueviolet;
-    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    flex-basis: 45%;
+    padding: 0px, 10px;
 }
 
 .cvBody {
+    display: flex;
+    flex-direction: column;
     background-color: aquamarine;
-    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    flex-basis: 45%;
+    padding: 0px, 10px;
 }
 
 .cvCell {
     border-top: 1px solid black;
     padding-bottom: 3px;
+    width: 100%;
 }
 
 .cellHeader{
@@ -29,6 +42,38 @@
     justify-content: space-around;
 }
 
-p {
-    margin-bottom: 10px;
+.profLinks{
+    display:flex;
+    flex: wrap;
+    justify-content: space-around;
+}
+
+.profLinks * {
+    padding: 2px;
+    text-decoration: none; 
+    font-weight: bold;
+    color: black;
+}
+
+.skillBlock {
+    display: flex;
+}
+
+.skillList {
+    margin-left: auto;
+    margin-right: auto;
+    flex-basis: 45%;
+    padding: 0px, 10px;
+}
+
+.courseLinks {
+    display:flex;
+    flex-direction: column;
+}
+
+.courseLinks * {
+    padding: 2px;
+    text-decoration: none; 
+    font-weight: bold;
+    color: black;
 }
