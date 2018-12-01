@@ -1,18 +1,37 @@
 import React from 'react';
 import "./ProfessionalCV.css";
+import Headshot from "../Landing/ProfessionalButton/Headshot.jpg"
 
 const ProfessionalCV = ({ onRouteChange }) => {
 
 
     return (
         <div className="masterContainer">
-            <h1>CV</h1>
+            <h1>About Me</h1>
 
             <div className="cvContainer">
 
                 <div className="cvFlavour ba">
-                    <h1>Flava Flave</h1>
-                    <h2>Supa Flave is a mega flave in the flava flave wave</h2>
+                    <div className="flavourIntro">
+                        <div className="flavourIntroText">
+                            <h1>Hi there! I'm Kyle!</h1>
+                            <h2>I'm a self-taught developer from Manchester, England.</h2>
+                        </div>
+                        <div className="flavourIntroImg">
+                            <img src= {Headshot} alt="Kyle Headshot"></img>
+                        </div>
+                    </div>
+                    <div className="flavourBody">
+                        <h2>I'm also an big fan of games, be they video, board or roleplaying!</h2>
+                        <h3>I originally trained in Biomedical Science at Leeds Beckett University, but over the last few years I've been pivoting towards coding. All of my skills are self-taught or learned from online courses like the ones listed to the right!</h3>
+                        <h3>A lot of my experience in in C#, as most of my big independent projects have been games in the Unity Engine. The first, "Project Potential", is available for Android devices on the Google Play Store, but nowadays I think of that as more of a vertical slice for "Project Godai".</h3>
+                        <h3>Godai is a huge evolution on everything Potential wanted to be. More characters, more enemies, more progression, and hopefully some better artwork at some point!</h3>
+                        <h3>Besides my game development work in C#, I've more recently been expanding my Web Development skills with React.js, and now this website exists!</h3>
+                        <h3>Outside of my coding, I currently work part-time as a Home Delivery Driver, and spend what little free time I have away from work gaming. As you might expect from looking at my projects, I'm a big fan of video games of almost any kind, from high-strategy to story-heavy RPGs.</h3>
+                        <h3>My partner and I are also apparently on a mission to fill our home with an ever increasing sea of board games, mostly co-operative games that won't start a fight when one of us loses!</h3>
+                        <h3>If you're here viewing this, I hope that you'll take an interest in the work going on here, and take a look at the blog too. It's the best way to see what I'm upto at the minute.</h3>
+                        <h2>(I'm also currently in the market for my first development role, so...hit me up! ;D)</h2>
+                    </div>
                 </div>
 
 
@@ -99,8 +118,6 @@ const ProfessionalCV = ({ onRouteChange }) => {
                         <p>Features expanded enemy types with different attack patterns and abilities.</p>
                         <p>Currently in alpha, pre-release APKs are available from GitHub.</p>
                     </div>
-
-
 
 
                 </div>
