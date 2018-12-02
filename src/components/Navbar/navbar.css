@@ -26,8 +26,9 @@
     right: 0;
     display: flex;
     flex-direction: column;
-    background-color: #1996AD99;
-    
+    background-color: rgba(25, 151, 173, 0.952);
+    border-left: solid 1px black;
+    border-bottom: solid 1px black;
 }
 
 .dropdown * {
