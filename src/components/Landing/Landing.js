@@ -7,7 +7,7 @@ class Landing extends React.Component{
     render(){
         const {onRouteChange} = this.props;
         return (
-            <div>
+            <div className="masterContainer">
                 <h1>Welcome to Axion.com!</h1>
                 <div className="flex w-100 pv5">
                     <div className="fl w-50">

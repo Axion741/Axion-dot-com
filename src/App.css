@@ -2,6 +2,11 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.masterContainer {
+  margin-top: 110px;
+  /* stops navbar overlap */
+}
+
 .App {
   text-align: center;
 }

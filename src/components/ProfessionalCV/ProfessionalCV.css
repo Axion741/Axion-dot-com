@@ -9,6 +9,7 @@ p {
     color: black;
 }
 
+
 .cvContainer {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +19,7 @@ p {
 .cvFlavour {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.1);
+    background-color:  #A1D6E210;
     margin-left: auto;
     margin-right: auto;
     flex-basis: 45%;
@@ -53,7 +54,7 @@ p {
 .cvBody {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.1);
+    background-color: #A1D6E210;
     margin-left: auto;
     margin-right: auto;
     flex-basis: 45%;

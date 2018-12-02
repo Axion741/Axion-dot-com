@@ -1,0 +1,48 @@
+.navbarContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+.navBanner {
+    display: flex;
+    justify-content: space-between;
+    background: #1996AD;
+    max-height: 100px;
+}
+
+.topBar {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.menuImg {
+    max-height: 100px;
+}
+
+.dropdown {
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #1996AD99;
+    
+}
+
+.dropdown * {
+    display: block;
+    padding: 20px 50px;
+    font-weight: bold;
+    transition: background-color 1s;
+    text-decoration: none;
+}
+
+.dropdown a{
+    padding: 0;
+}
+
+
+.dropdown *:hover {
+    background-color: #1996AD;
+}
