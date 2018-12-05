@@ -26,18 +26,18 @@ class Blog extends React.Component {
                                 <h2>Posted by Kyle</h2>
                             </div>
                             <div className="authorImgParent">
-                                <img className="authorImg" src={Headshot}/>
+                                <img className="authorImg" src={Headshot} alt="authorImg"/>
                             </div>
                         </div>
 
                     </div>
 
                     <div className="postBody">
-                        <h1>Body</h1>
-                        <h1>Body</h1>
-                        <h1>Body</h1>
-                        <h1>Body</h1>
-                        <h1>Body</h1>
+                        <h1>Body Is Here, Look at all this text!</h1>
+                        <h1>Body Is Here, Look at all this text!</h1>
+                        <h1>Body Is Here, Look at all this text!</h1>
+                        <h1>Body Is Here, Look at all this text!</h1>
+                        <h1>Body Is Here, Look at all this text!</h1>
                     </div>
                 </div>
                 <div className="sidebar">

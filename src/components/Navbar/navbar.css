@@ -8,7 +8,7 @@
 .navBanner {
     display: flex;
     justify-content: space-between;
-    background: #1996AD;
+    background: #1995AD;
     max-height: 100px;
 }
 
@@ -26,7 +26,7 @@
     right: 0;
     display: flex;
     flex-direction: column;
-    background-color: rgba(25, 151, 173, 0.952);
+    background: rgba(25, 148, 173, 0.920);
     border-left: solid 1px black;
     border-bottom: solid 1px black;
 }
@@ -45,5 +45,5 @@
 
 
 .dropdown *:hover {
-    background-color: #1996AD;
+    background-color: #72B6C6;
 }

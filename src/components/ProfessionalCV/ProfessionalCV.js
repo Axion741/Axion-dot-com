@@ -23,13 +23,13 @@ const ProfessionalCV = ({ onRouteChange }) => {
                     </div>
                     <div className="flavourBody">
                         <h2>I'm also a big fan of games, be they video, board or roleplaying!</h2>
-                        <h3>I have a degree in Biomedical Science from Leeds Beckett University, but over the last few years I've been pivoting towards coding. All of my skills are self-taught or learned from online courses, like the ones listed to the right!</h3>
-                        <h3>A lot of my experience is in C#, as most of my big independent projects have been games in the Unity Engine. The first, "Project Potential", is available for Android devices on the Google Play Store, but nowadays I think of that as more of a vertical slice for "Project Godai".</h3>
-                        <h3>Godai is a huge evolution on everything Potential wanted to be. More characters, more enemies, more progression, and hopefully some better artwork at some point!</h3>
-                        <h3>Besides my game development work in C#, I've more recently been expanding my Web Development skills with React.js, and now this website exists!</h3>
-                        <h3>Outside of my coding, I currently work part-time as a Home Delivery Driver, and spend what little free time I have away from work gaming. As you might expect from looking at my projects, I'm a big fan of video games of almost any kind, from high-strategy to story-heavy RPGs.</h3>
-                        <h3>My partner and I are also apparently on a mission to fill our home with an ever increasing sea of board games, mostly co-operative games that won't start a fight when one of us loses!</h3>
-                        <h3>If you're here viewing this, I hope that you'll take an interest in the work going on here, and take a look at the blog too. It's the best way to see what I'm upto at the moment.</h3>
+                        <p>I have a degree in Biomedical Science from Leeds Beckett University, but over the last few years I've been pivoting towards coding. All of my skills are self-taught or learned from online courses, like the ones listed to the right!</p>
+                        <p>A lot of my experience is in C#, as most of my big independent projects have been games in the Unity Engine. The first, "Project Potential", is available for Android devices on the Google Play Store, but nowadays I think of that as more of a vertical slice for "Project Godai".</p>
+                        <p>Godai is a huge evolution on everything Potential wanted to be. More characters, more enemies, more progression, and hopefully some better artwork at some point!</p>
+                        <p>Besides my game development work in C#, I've more recently been expanding my Web Development skills with React.js, and now this website exists!</p>
+                        <p>Outside of my coding, I currently work part-time as a Home Delivery Driver, and spend what little free time I have away from work gaming. As you might expect from looking at my projects, I'm a big fan of video games of almost any kind, from high-strategy to story-heavy RPGs.</p>
+                        <p>My partner and I are also apparently on a mission to fill our home with an ever increasing sea of board games, mostly co-operative games that won't start a fight when one of us loses!</p>
+                        <p>If you're here viewing this, I hope that you'll take an interest in the work going on here, and take a look at the blog too. It's the best way to see what I'm upto at the moment.</p>
                     </div>
                 </div>
 
