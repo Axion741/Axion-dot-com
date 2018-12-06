@@ -3,6 +3,7 @@ import ProfessionalCV from './components/ProfessionalCV/ProfessionalCV';
 import Blog from './components/Blog/Blog';
 import Landing from './components/Landing/Landing';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 import './App.css';
 
@@ -47,6 +48,7 @@ onRouteChange = (route) => {
         :null
       }
 
+      <Footer/>
       </div>
       
     );
