@@ -1,9 +1,10 @@
 import React from 'react';
+import "./Footer.css";
 
 const Footer = () => {
 
     return (
-        <div className="FooterContainer">
+        <div className="footerContainer">
             <a className="link dim gray dib h3 w3 br-100 mr3 pa2 bg-near-white ba b--black-10" href="https://www.linkedin.com/in/kyleballagher/" title="">
                 <svg data-icon="linkedin" viewBox="0 0 24 24" style={{}}>
                     <title>linkedin icon</title>

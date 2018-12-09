@@ -31,7 +31,6 @@ class Navbar extends React.Component {
     }
 
     render() {
-        // const {onRouteChange} = this.props;
         return (
             <div className="navbarContainer">
                 <div className="navBanner">

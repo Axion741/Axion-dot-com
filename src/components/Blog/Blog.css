@@ -31,7 +31,9 @@
     display: flex;
     justify-content: space-between;
     padding-left: 20px;
+    padding-right: 20px;
     background: green;
+    align-items: center;
 }
 
 .authorImg {

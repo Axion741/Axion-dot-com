@@ -1,43 +1,57 @@
 import React from 'react';
 import './Blog.css';
-import Headshot from "../Landing/ProfessionalButton/Headshot.jpg"
 
 class Blog extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            post: {
+                id: "",
+                title: '',
+                date: '',
+                keywords: '',
+                author: '',
+                content: ``
+            }
+        }
+    }
+
+    componentDidMount() {
+        this.buildPost("002");
+    }
+
+
+    buildPost = (postId) => {
+        const { grabBlogPost } = this.props;
+        this.setState({ post: grabBlogPost(postId) });
+    }
+
     render() {
-
-
-
+        const post = this.state.post;
         return (
             <div className="blogMasterContainer">
                 <div className="blogContainer">
                     <div className="postHeader">
                         <div className="postTitle">
-                          <h1>Example Post</h1>  
+                            <h1>{post.title}</h1>
                         </div>
                         <div className="postHeadFooter">
                             <div className="postDate">
-                                <h2>01/01/2018</h2>
+                                <h2>{post.date}</h2>
                             </div>
                             <div className="keywords">
-                                <h2>Test, coding</h2>
+                                <h2>Keywords: {post.keywords}</h2>
                             </div>
                             <div className="author">
-                                <h2>Posted by Kyle</h2>
-                            </div>
-                            <div className="authorImgParent">
-                                <img className="authorImg" src={Headshot} alt="authorImg"/>
+                                <h2>Posted by: {post.author}</h2>
                             </div>
                         </div>
 
                     </div>
 
                     <div className="postBody">
-                        <h1>Body Is Here, Look at all this text!</h1>
-                        <h1>Body Is Here, Look at all this text!</h1>
-                        <h1>Body Is Here, Look at all this text!</h1>
-                        <h1>Body Is Here, Look at all this text!</h1>
-                        <h1>Body Is Here, Look at all this text!</h1>
+                        {post.content}
                     </div>
                 </div>
                 <div className="sidebar">
