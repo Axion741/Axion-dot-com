@@ -125,7 +125,7 @@ const ProfessionalCV = ({ onRouteChange }) => {
 
 
 
-            <h2 onClick={() => onRouteChange('landing')} className="pointer grow">Back</h2>
+            {/* <h2 onClick={() => onRouteChange('landing')} className="pointer grow">Back</h2> */}
         </div>
     );
 

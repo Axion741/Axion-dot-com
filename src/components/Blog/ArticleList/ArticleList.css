@@ -1,0 +1,9 @@
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 500px;
+    background: #BCBABE;
+    margin-left: auto;
+    margin-right: auto;
+}

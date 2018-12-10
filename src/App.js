@@ -70,12 +70,12 @@ class App extends Component {
 
         {
           this.state.route === 'blog'
-            ? <Blog testBlog={this.state.testBlog} grabBlogPost={this.grabBlogPost} />
+            ? <Blog grabBlogPost={this.grabBlogPost} />
             : null
         }
 
         <Footer />
-      </div >
+      </div>
 
     );
   }
