@@ -3,23 +3,54 @@ import './ArticleList.css';
 
 class ArticleList extends React.Component {
 
+    constructor() {
+        super();
+        this.state = {
+            postList: null,
+        }
+    }
 
-    openBlogPost = (postId) => {
-        const {openBlog} = this.props;
-        openBlog(postId);
+    componentDidMount() {
+        this.setupPostListing();
     }
 
 
+    openBlogPost = (postId) => {
+        const { openBlog } = this.props;
+        openBlog(postId);
+    }
+
+    setupPostListing = () => {
+        const { passPostListing } = this.props;
+        var postListing = passPostListing();
+        console.log(postListing);
+        this.buildPostList(postListing);
+    }
+
+    buildPostList = (postListing) => {
+        var newPostList = postListing.map((post, i) => {
+            return (
+                <div key={i} className="listedArticle">
+                    <h1 className="articleTitle pointer" onClick={() => this.openBlogPost(post.id)}>{post.title}</h1>
+                    <div className="infoContainer">
+                        <p className="articleInfo"> By {post.author}</p>
+                        <p className="articleInfo"> Keywords: {post.keywords}</p>
+                        <p className="articleInfo">Posted: {post.date}</p>
+                    </div>
+                </div>
+            );
+        })
+        this.setState({ postList: newPostList })
+    }
+
+    addPost = (post) => {
+        console.log(post);
+    }
 
     render() {
         return (
             <div className="listContainer">
-                <div className="listedArticle">
-                    <h1 onClick={() => this.openBlogPost("001")}>Test Post 1</h1>
-                </div>
-                <div className="listedArticle">
-                    <h1 onClick={() => this.openBlogPost("002")}>Test Post 2</h1>
-                </div>
+                {this.state.postList}
             </div>
         )
     }

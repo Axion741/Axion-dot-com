@@ -27,10 +27,18 @@ class App extends Component {
         {
           id: "002",
           title: 'Test Post 2',
-          date: '01/01/2018',
+          date: '02/01/2018',
           keywords: 'Test, Coding',
           author: 'Kyle',
           content: `Here's the blog content! It's great!`,
+        },
+        {
+          id: "003",
+          title: 'Test Post 3',
+          date: '03/01/2018',
+          keywords: 'Test, Coding',
+          author: 'Kyle',
+          content: `Here's the blog content! It's awesome!`,
         }
       ]
     }
@@ -47,9 +55,14 @@ class App extends Component {
       this.setState({ route: 'blog' })
   }
 
-  grabBlogPost = (postId) => {
+  getBlogPost = (postId) => {
     let selectedPost = this.state.post.find(x => x.id === postId);
     return selectedPost;
+  }
+
+  getPostListing = () => {
+    let postListing = this.state.post;
+    return postListing;
   }
 
   render() {
@@ -64,13 +77,13 @@ class App extends Component {
 
         {
           this.state.route === 'cv'
-            ? <ProfessionalCV onRouteChange={this.onRouteChange} />
+            ? <ProfessionalCV />
             : null
         }
 
         {
           this.state.route === 'blog'
-            ? <Blog grabBlogPost={this.grabBlogPost} />
+            ? <Blog getBlogPost={this.getBlogPost} getPostListing={this.getPostListing} />
             : null
         }
 

@@ -25,61 +25,71 @@ class Blog extends React.Component {
 
     openBlog = (postId) => {
         this.buildPost(postId);
-        this.setState({listActive: false});
+        this.setState({ listActive: false });
     }
 
     closeBlog = () => {
-        this.setState({listActive: true});
+        this.setState({ listActive: true });
     }
 
     buildPost = (postId) => {
-        const { grabBlogPost } = this.props;
-        this.setState({ post: grabBlogPost(postId) });
+        const { getBlogPost } = this.props;
+        this.setState({ post: getBlogPost(postId) });
+    }
+
+    passPostListing = () => {
+        const {getPostListing} = this.props;
+        var postListing = getPostListing();
+        return postListing;
     }
 
     render() {
         const post = this.state.post;
         return (
             <div className="blogMasterContainer">
-                {this.state.listActive === true
-                    ? <ArticleList openBlog={this.openBlog}/>
-                    : <div className="blogContainer">
-                        <div className="postHeader">
-                            <div className="postTitle">
-                                <h1>{post.title}</h1>
-                            </div>
-                            <div className="postHeadFooter">
-                                <div className="postDate">
-                                    <h2>{post.date}</h2>
+                <div className="blogContentContainer">
+                    {this.state.listActive === true
+                        ? <ArticleList openBlog={this.openBlog} passPostListing={this.passPostListing}/>
+                        : <div className="blogContainer">
+                            <div className="postHeader">
+                                <div className="postTitle">
+                                    <h1>{post.title}</h1>
                                 </div>
-                                <div className="keywords">
-                                    <h2>Keywords: {post.keywords}</h2>
+                                <div className="postHeadFooter">
+                                    <div className="postDate">
+                                        <h2>{post.date}</h2>
+                                    </div>
+                                    <div className="keywords">
+                                        <h2>Keywords: {post.keywords}</h2>
+                                    </div>
+                                    <div className="author">
+                                        <h2>Posted by: {post.author}</h2>
+                                    </div>
                                 </div>
-                                <div className="author">
-                                    <h2>Posted by: {post.author}</h2>
-                                </div>
+
                             </div>
 
+                            <div className="postBody">
+                                {post.content}
+                            </div>
                         </div>
+                    }
 
-                        <div className="postBody">
-                            {post.content}
-                        </div>
+
+
+                    <div className="sidebar">
+                        <h1>Sidebar</h1>
+                        <h1>Sidebar</h1>
+                        <h1>Sidebar</h1>
+                        <h1>Sidebar</h1>
+                        <h1>Sidebar</h1>
                     </div>
+                </div>
+                    
+                {this.state.listActive === false
+                    ?<h1 onClick={() => this.closeBlog()} >Back</h1>
+                    : null
                 }
-
-
-
-                <div className="sidebar">
-                    <h1>Sidebar</h1>
-                    <h1>Sidebar</h1>
-                    <h1>Sidebar</h1>
-                    <h1>Sidebar</h1>
-                    <h1>Sidebar</h1>
-                </div>
-                <div>
-                    <h1 onClick={() => this.closeBlog()} >Back</h1>
-                </div>
             </div>
         );
     }

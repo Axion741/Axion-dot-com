@@ -7,3 +7,23 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.listedArticle {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.articleTitle {
+    margin-bottom: 0px;
+    
+}
+
+
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    
+}

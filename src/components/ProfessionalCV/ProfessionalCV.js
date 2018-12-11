@@ -2,7 +2,7 @@ import React from 'react';
 import "./ProfessionalCV.css";
 import Headshot from "../Landing/ProfessionalButton/Headshot.jpg"
 
-const ProfessionalCV = ({ onRouteChange }) => {
+const ProfessionalCV = () => {
 
 
     return (
@@ -123,9 +123,6 @@ const ProfessionalCV = ({ onRouteChange }) => {
 
             </div>
 
-
-
-            {/* <h2 onClick={() => onRouteChange('landing')} className="pointer grow">Back</h2> */}
         </div>
     );
 
