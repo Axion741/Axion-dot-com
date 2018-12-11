@@ -15,13 +15,14 @@
     flex-direction: column;
     width: 70%;
     min-width: 500px;
-    background: #BCBABE;
+    background: rgba(1, 1, 2, 0.185);
     margin-left: auto;
     margin-right: auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .postHeader {
-    background: #1995AD90;
     margin: 2px;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,8 @@
 .postTitle {
     text-align: left;
     padding-left: 20px;
-    background: pink;
+    /* background: pink; */
+    border-bottom: 1px solid black;
 }
 
 .postHeadFooter {
@@ -38,8 +40,13 @@
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-    background: green;
+    /* background: green; */
     align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.postHeadFooter p {
+    font-weight: bold;
 }
 
 .authorImg {
@@ -47,16 +54,21 @@
 }
 
 .postBody {
-    background: #A1D6E290;
+    /* background: #A1D6E290; */
     margin: 2px;
+    text-align: left;
+    padding-top: 2px;
+    padding-left: 2px;
 }
 
 .sidebar {
-    background: orange;
+    /* background: orange; */
+    background: rgba(1, 1, 2, 0.185);
     width: 20%;
     min-width: 200px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid black;
 }
 
 @media only screen and (max-width: 600px) {

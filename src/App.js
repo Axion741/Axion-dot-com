@@ -22,7 +22,7 @@ class App extends Component {
           date: '01/01/2018',
           keywords: 'Test, Coding',
           author: 'Kyle',
-          content: `Here's the blog content! It's neat!`,
+          content: `Here's the blog content! It's neat! `,
         },
         {
           id: "002",
@@ -36,7 +36,7 @@ class App extends Component {
           id: "003",
           title: 'Test Post 3',
           date: '03/01/2018',
-          keywords: 'Test, Coding',
+          keywords: 'Test, Coding, Misc',
           author: 'Kyle',
           content: `Here's the blog content! It's awesome!`,
         }

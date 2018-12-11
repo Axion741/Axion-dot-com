@@ -57,13 +57,13 @@ class Blog extends React.Component {
                                 </div>
                                 <div className="postHeadFooter">
                                     <div className="postDate">
-                                        <h2>{post.date}</h2>
+                                        <p>{post.date}</p>
                                     </div>
                                     <div className="keywords">
-                                        <h2>Keywords: {post.keywords}</h2>
+                                        <p>Keywords: {post.keywords}</p>
                                     </div>
                                     <div className="author">
-                                        <h2>Posted by: {post.author}</h2>
+                                        <p>Posted by: {post.author}</p>
                                     </div>
                                 </div>
 
