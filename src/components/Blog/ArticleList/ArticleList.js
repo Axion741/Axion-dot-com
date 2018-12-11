@@ -33,9 +33,9 @@ class ArticleList extends React.Component {
                 <div key={i} className="listedArticle">
                     <h1 className="articleTitle pointer" onClick={() => this.openBlogPost(post.id)}>{post.title}</h1>
                     <div className="infoContainer">
-                        <p className="articleInfo"> By {post.author}</p>
-                        <p className="articleInfo"> Keywords: {post.keywords}</p>
-                        <p className="articleInfo">Posted: {post.date}</p>
+                        <p className="articleAuthor"> By: {post.author}</p>
+                        <p className="articleKeywords"> Keywords: {post.keywords}</p>
+                        <p className="articleDate">Posted: {post.date}</p>
                     </div>
                 </div>
             );

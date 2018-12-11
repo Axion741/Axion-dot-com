@@ -37,4 +37,11 @@
         flex-basis: 90%;
     }
 
+    .articleKeywords{
+        text-align: center;
+    }
+    .articleDate {
+        text-align: right;
+    }
+
 }
