@@ -1,3 +1,6 @@
+This site is WIP!
+The test build of my personal site is live at; http://axion-dot-com-test.herokuapp.com!
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
