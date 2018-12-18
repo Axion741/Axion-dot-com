@@ -4,6 +4,7 @@ import Blog from './components/Blog/Blog';
 import Landing from './components/Landing/Landing';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Postfile from './postfile.json';
 
 import './App.css';
 
@@ -15,33 +16,9 @@ class App extends Component {
     super();
     this.state = {
       route: 'landing',
-      post: [
-        {
-          id: "001",
-          title: 'Test Post',
-          date: '01/01/2018',
-          keywords: 'Test, Coding',
-          author: 'Kyle',
-          content: `Here's the blog content! It's neat! `,
-        },
-        {
-          id: "002",
-          title: 'Test Post 2',
-          date: '02/01/2018',
-          keywords: 'Test, Coding',
-          author: 'Kyle',
-          content: `Here's the blog content! It's great!`,
-        },
-        {
-          id: "003",
-          title: 'Test Post 3',
-          date: '03/01/2018',
-          keywords: 'Test, Coding, Misc',
-          author: 'Kyle',
-          content: `Here's the blog content! It's awesome!`,
-        }
-      ]
+      post: Postfile.post, //Needs UN-JSONifying?
     }
+    console.log(this.state.post)
   }
 
   onRouteChange = (route) => {

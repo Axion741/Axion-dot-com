@@ -87,7 +87,7 @@ class Blog extends React.Component {
                 </div>
                     
                 {this.state.listActive === false
-                    ?<h1 onClick={() => this.closeBlog()} >Back</h1>
+                    ?<h1 className="backButton pointer" onClick={() => this.closeBlog()} >Back</h1>
                     : null
                 }
             </div>
