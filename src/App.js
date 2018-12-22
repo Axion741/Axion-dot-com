@@ -18,7 +18,7 @@ class App extends Component {
       route: 'landing',
       post: Postfile.post, //Needs UN-JSONifying?
     }
-    console.log(this.state.post)
+    //console.log(this.state.post)
   }
 
   onRouteChange = (route) => {
