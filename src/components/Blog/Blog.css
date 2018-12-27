@@ -64,12 +64,12 @@
 
 .sidebar {
     /* background: orange; */
-    background: rgba(1, 1, 2, 0.185);
+    /* background: rgba(1, 1, 2, 0.185); */
     flex-basis: 20%;
     /* min-width: 200px; */
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .backButton {

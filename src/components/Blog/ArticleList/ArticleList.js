@@ -93,7 +93,7 @@ class ArticleList extends React.Component {
                             ? <p className="pageButton pointer" onClick={() => this.changePage(-1)}>{this.state.activePostPage - 1}</p>
                             : null
                     }
-                    <p className="pageButton pointer">{this.state.activePostPage}</p>
+                    <p className="pageButtonCurrent pointer">{this.state.activePostPage}</p>
 
                     {
                         this.state.activePostPage < this.state.postPagesLength //if on last page, don't display forward button

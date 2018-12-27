@@ -43,9 +43,9 @@ const ProfessionalCV = () => {
                             <h2>k.ballagher@gmail.com</h2>
                         </div>
                         <div className="profLinks">
-                            <a href='https://www.linkedin.com/in/kyleballagher/'>LinkedIn</a>
-                            <a href='https://github.com/Axion741'>GitHub</a>
-                            <a href='https://axion-smartbrain.herokuapp.com/'>Axion's SmartBrain</a>
+                            <a href='https://www.linkedin.com/in/kyleballagher/' target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            <a href='https://github.com/Axion741' target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href='https://axion-smartbrain.herokuapp.com/' target="_blank" rel="noopener noreferrer">Axion's SmartBrain</a>
                         </div>
 
 
@@ -77,9 +77,9 @@ const ProfessionalCV = () => {
                             <h2>Online Learning</h2>
                         </div>
                         <div className="courseLinks">
-                            <a href="https://www.udemy.com/unitycourse/">Complete C# Unity Developer 2D: Learn to Code Making Games - Ben Tristem (Ongoing)</a>
-                            <a href="https://www.udemy.com/the-complete-web-developer-in-2018/">The Complete Web Developer 2019: Zero to Mastery - Andrei Neagoie</a>
-                            <a href="https://eu.udacity.com/course/android-basics-nanodegree-by-google--nd803">Google Developer Challenge: Android Basics</a>
+                            <a href="https://www.udemy.com/unitycourse/" target="_blank" rel="noopener noreferrer">Complete C# Unity Developer 2D: Learn to Code Making Games - Ben Tristem (Ongoing)</a>
+                            <a href="https://www.udemy.com/the-complete-web-developer-in-2018/" target="_blank" rel="noopener noreferrer">The Complete Web Developer 2019: Zero to Mastery - Andrei Neagoie</a>
+                            <a href="https://eu.udacity.com/course/android-basics-nanodegree-by-google--nd803" target="_blank" rel="noopener noreferrer">Google Developer Challenge: Android Basics</a>
                         </div>
                     </div>
 
