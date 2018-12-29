@@ -9,6 +9,7 @@ class ArticleList extends React.Component {
             postList: null,
             postPages: null,
             postPagesLength: 1, //placeholder
+            postPagesLengthBookend: 1, //placeholder
             activePostPage: 1,
         }
     }
@@ -27,8 +28,6 @@ class ArticleList extends React.Component {
     setupPostListing = () => {
         const { passPostListing } = this.props;
         var postListing = passPostListing();
-        //console.log(postListing);
-        //this.buildPostList(postListing);
         this.buildPostPages(postListing);
     }
 
@@ -46,17 +45,13 @@ class ArticleList extends React.Component {
                 postPages[arrayPage].push(post);
             }
         });
-
-        //console.log(postPages);
-        this.setState({ postPages: postPages, postPagesLength: postPages.length });
-        
-        this.buildPostList(postPages);
+        this.setState({ postPages: postPages, postPagesLength: postPages.length, postPagesLengthBookend: (postPages.length -2) },
+        () => {this.buildPostList(postPages)})
     }
 
     //iterate through the passed in postList, returning the jsx object for each post, then set the list of posts for displaying
     buildPostList = (postListing) => {
         var newPostList = postListing[this.state.activePostPage - 1].map((post, i) => {
-            //console.log("target postPage = " + (this.state.activePostPage - 1))
             return (
                 <div key={i} className="listedArticle">
                     <h1 className="articleTitle pointer" onClick={() => this.openBlogPost(post.id)}>{post.title}</h1>
@@ -71,16 +66,21 @@ class ArticleList extends React.Component {
         this.setState({ postList: newPostList })
     }
 
-    changePage = (page) => {
-        // console.log("postpage = " + this.state.activePostPage)
-        // console.log("page = " + page);
-        var newPostPage = this.state.activePostPage + page;
-        //console.log("newPostPage = " + newPostPage)
+    //change page based on modifier on page buttons below (+1/-1)
+    changePage = (pageModifier) => {
+        var newPostPage = this.state.activePostPage + pageModifier;
         this.setState({ activePostPage: newPostPage }, () => {
             this.buildPostList(this.state.postPages);
         });
-        // console.log("newPostPage = " + this.state.activePostPage);
+    }
 
+    //Jump to first or last page
+    firstPage = () => {
+        this.setState({activePostPage: 1}, () => {this.buildPostList(this.state.postPages)})
+    }
+
+    lastPage = () => {
+        this.setState({activePostPage: this.state.postPagesLength}, () => {this.buildPostList(this.state.postPages)})
     }
 
     render() {
@@ -88,18 +88,39 @@ class ArticleList extends React.Component {
             <div className="listContainer">
                 {this.state.postList}
                 <div className="pageButtonContainer">
+                    
+                    {
+                        this.state.activePostPage > 2   //if past the second page, display the "first" button 
+                            ? <div className="bookends">
+                                <p className="pageButton pointer" onClick={() => this.firstPage()}>First</p>
+                                <p>...</p>
+                              </div>
+                            : null
+                    }
+
                     {
                         this.state.activePostPage > 1 //If on first page, don't display back button
                             ? <p className="pageButton pointer" onClick={() => this.changePage(-1)}>{this.state.activePostPage - 1}</p>
                             : null
                     }
+
                     <p className="pageButtonCurrent pointer">{this.state.activePostPage}</p>
 
                     {
                         this.state.activePostPage < this.state.postPagesLength //if on last page, don't display forward button
-                        ?<p className="pageButton pointer" onClick={() => this.changePage(+1)}>{this.state.activePostPage + 1}</p>
-                        : null
+                            ? <p className="pageButton pointer" onClick={() => this.changePage(+1)}>{this.state.activePostPage + 1}</p>
+                            : null
                     }
+
+                    {
+                        this.state.activePostPage <= (this.state.postPagesLengthBookend) //if at least 2 away from the end, display the "last" button 
+                            ? <div className="bookends"> 
+                                <p>...</p>
+                                <p className="pageButton pointer" onClick={() => this.lastPage()}>Last</p>
+                              </div>
+                            : null
+                    }
+
                 </div>
             </div>
 
