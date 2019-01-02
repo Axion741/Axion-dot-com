@@ -38,11 +38,11 @@ class Blog extends React.Component {
         this.setState({ post: getBlogPost(postId) });
     }
 
-    passPostListing = () => {
-        const { getPostListing } = this.props;
-        var postListing = getPostListing();
-        return postListing;
-    }
+    // passPostListing = () => {
+    //     const { getPostListing } = this.props;
+    //     var postListing = getPostListing();
+    //     return postListing;
+    // }
 
     render() {
         const post = this.state.post;

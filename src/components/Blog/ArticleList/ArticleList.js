@@ -25,10 +25,19 @@ class ArticleList extends React.Component {
     }
 
     //assign the postList from props and pass to buildPostList
+    // setupPostListing = () => {
+    //     const { passPostListing } = this.props;
+    //     var postListing = passPostListing();
+    //     this.buildPostPages(postListing);
+    // }
+
+    //fetch postList from server and pass to buildPostList
     setupPostListing = () => {
-        const { passPostListing } = this.props;
-        var postListing = passPostListing();
-        this.buildPostPages(postListing);
+        fetch('https://axion-dot-com-server-test.herokuapp.com/queryDb', {
+            method: 'get',  
+           })
+         .then(response => response.json())
+         .then(response => this.buildPostPages(response.post))
     }
 
     //assign posts to arrays of 5 posts inside an array, for building search pages

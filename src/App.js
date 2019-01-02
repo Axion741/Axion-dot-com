@@ -4,7 +4,7 @@ import Blog from './components/Blog/Blog';
 import Landing from './components/Landing/Landing';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import Postfile from './postfile.json';
+// import Postfile from './postfile.json';
 
 import './App.css';
 
@@ -16,7 +16,7 @@ class App extends Component {
     super();
     this.state = {
       route: 'landing',
-      post: Postfile.post, //Needs UN-JSONifying?
+      // post: Postfile.post, //Needs UN-JSONifying?
     }
     //console.log(this.state.post)
   }
@@ -37,10 +37,10 @@ class App extends Component {
     return selectedPost;
   }
 
-  getPostListing = () => {
-    let postListing = this.state.post;
-    return postListing;
-  }
+  // getPostListing = () => {
+  //   let postListing = this.state.post;
+  //   return postListing;
+  // }
 
   render() {
     return (
