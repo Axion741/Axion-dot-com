@@ -19,10 +19,15 @@ class ArticleList extends React.Component {
     }
 
 
-    openBlogPost = (postId) => {
+    openBlogPost = (selectedPost) => {
         const { openBlog } = this.props;
-        openBlog(postId);
+        openBlog(selectedPost);
     }
+
+    // getBlogPost = (postId) => {
+    //     let selectedPost = this.state.postList[activePostPage].find(x => x.id === postId);
+    //     openBlogPost(selectedPost);
+    //   }
 
     //assign the postList from props and pass to buildPostList
     // setupPostListing = () => {
@@ -63,7 +68,7 @@ class ArticleList extends React.Component {
         var newPostList = postListing[this.state.activePostPage - 1].map((post, i) => {
             return (
                 <div key={i} className="listedArticle">
-                    <h1 className="articleTitle pointer" onClick={() => this.openBlogPost(post.id)}>{post.title}</h1>
+                    <h1 className="articleTitle pointer" onClick={() => this.openBlogPost(post)}>{post.title}</h1>
                     <div className="infoContainer">
                         <p className="articleAuthor"> By: {post.author}</p>
                         <p className="articleKeywords"> Keywords: {post.keywords}</p>

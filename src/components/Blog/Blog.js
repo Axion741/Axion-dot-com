@@ -2,6 +2,7 @@ import React from 'react';
 import './Blog.css';
 import ArticleList from './ArticleList/ArticleList';
 import {TwitterTimelineEmbed} from 'react-twitter-embed';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 class Blog extends React.Component {
 
@@ -15,7 +16,7 @@ class Blog extends React.Component {
                 date: '',
                 keywords: '',
                 author: '',
-                content: ``
+                content: ``,
             }
         }
     }
@@ -24,8 +25,8 @@ class Blog extends React.Component {
     //     this.buildPost("002");
     // }
 
-    openBlog = (postId) => {
-        this.buildPost(postId);
+    openBlog = (post) => {
+        this.buildPost(post);
         this.setState({ listActive: false });
     }
 
@@ -33,9 +34,9 @@ class Blog extends React.Component {
         this.setState({ listActive: true });
     }
 
-    buildPost = (postId) => {
-        const { getBlogPost } = this.props;
-        this.setState({ post: getBlogPost(postId) });
+    buildPost = (blogPost) => {
+
+        this.setState({ post: blogPost });
     }
 
     // passPostListing = () => {
@@ -46,6 +47,7 @@ class Blog extends React.Component {
 
     render() {
         const post = this.state.post;
+        const postContent = post.content;
         return (
             <div className="blogMasterContainer">
                 <div className="blogContentContainer">
@@ -69,9 +71,8 @@ class Blog extends React.Component {
                                 </div>
 
                             </div>
-
                             <div className="postBody">
-                                {post.content}
+                                {ReactHtmlParser(postContent)}
                             </div>
                         </div>
                     }
