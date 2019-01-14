@@ -2,7 +2,9 @@ import React from 'react';
 import './Blog.css';
 import ArticleList from './ArticleList/ArticleList';
 import {TwitterTimelineEmbed} from 'react-twitter-embed';
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import Parser from 'html-react-parser';
+
+var images = require.context('./img', true);
 
 class Blog extends React.Component {
 
@@ -35,8 +37,9 @@ class Blog extends React.Component {
     }
 
     buildPost = (blogPost) => {
-
         this.setState({ post: blogPost });
+        // this.setState({ post: blogPost }, () => {this.updateParsedPost(this.state.post)});
+
     }
 
     // passPostListing = () => {
@@ -45,9 +48,25 @@ class Blog extends React.Component {
     //     return postListing;
     // }
 
+    // updateParsedPost = (post) => {
+    //     const postContent = post.content;
+    //     const parsedPostContent = Parser(postContent);
+    //     const parsedPost = {
+    //         id: post.id,
+    //         title: post.title,
+    //         date: post.date,
+    //         keywords: post.keywords,
+    //         author: post.author,
+    //         content: parsedPostContent,
+    //     }
+    //     console.log(parsedPostContent)
+    //     this.setState({post: parsedPost})
+    // }
+
     render() {
         const post = this.state.post;
-        const postContent = post.content;
+        // this.updateParsedPost(post);
+        console.log(this.state.post.content)
         return (
             <div className="blogMasterContainer">
                 <div className="blogContentContainer">
@@ -72,7 +91,9 @@ class Blog extends React.Component {
 
                             </div>
                             <div className="postBody">
-                                {ReactHtmlParser(postContent)}
+                                {Parser(post.content)}
+                                <img src={require("./img/articles/2019/1/react.png")}/>
+                                <img src={images("./articles/2019/1/react.png")}/>
                             </div>
                         </div>
                     }
@@ -83,8 +104,8 @@ class Blog extends React.Component {
                         <TwitterTimelineEmbed
                             sourceType="profile"
                             screenName="kyleballagher"
-                            autoHeight={true}
-                            // options={{ height: 400 }}
+                            // autoHeight={true}
+                            options={{ height: 605 }}
                         />
                     </div>
                 </div>
