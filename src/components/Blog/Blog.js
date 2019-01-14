@@ -92,8 +92,8 @@ class Blog extends React.Component {
                             </div>
                             <div className="postBody">
                                 {Parser(post.content)}
-                                <img src={require("./img/articles/2019/1/react.png")}/>
-                                <img src={images("./articles/2019/1/react.png")}/>
+                                {/* <img src={require("./img/articles/2019/1/react.png")}/>
+                                <img src={images("./articles/2019/1/react.png")}/> */}
                             </div>
                         </div>
                     }
